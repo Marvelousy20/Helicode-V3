@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -15,6 +16,7 @@ interface LoginFormData {
 export function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
 
   const {
     register,
@@ -27,7 +29,7 @@ export function LoginForm() {
   const onSubmit = async (data: LoginFormData) => {
     setIsLoading(true);
     // Placeholder for future authentication logic
-    console.log("Login data:", data);
+    router.push("/dashboard");
     // Future: integrate with auth service
     setIsLoading(false);
   };
