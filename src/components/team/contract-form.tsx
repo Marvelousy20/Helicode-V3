@@ -10,6 +10,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Calendar, DollarSign } from "lucide-react";
+import Image from "next/image";
 
 interface ContractFormProps {
   onSubmit: () => void;
@@ -46,8 +47,13 @@ export function ContractForm({ onSubmit }: ContractFormProps) {
               Currency <span className="text-[#FF3F3F]">*</span>
             </label>
             <div className="relative">
-              <div className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 rounded-full bg-[#2775ca] flex items-center justify-center">
-                <span className="text-white text-xs font-bold">$</span>
+              <div className="absolute left-3 top-1/2 -translate-y-1/2">
+                <Image
+                  src="/team/dollar.svg"
+                  alt="dollar"
+                  width={20}
+                  height={20}
+                />
               </div>
               <Input value="USDC" readOnly className="pl-10" />
             </div>

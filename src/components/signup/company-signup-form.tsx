@@ -196,7 +196,7 @@ export function CompanySignupForm() {
         className="relative w-full h-10.5 font-medium border-[#DAE0EA] text-[#212121] hover:bg-[#f4f5f7] bg-transparent flex items-center justify-center"
       >
         <Image
-          src="/signup/Google.png"
+          src="/signup/Google.svg"
           alt="Google Logo"
           width={26}
           height={26}
