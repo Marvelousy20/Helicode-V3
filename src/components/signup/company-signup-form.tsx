@@ -159,7 +159,8 @@ export function CompanySignupForm() {
               className={`pr-10 ${passwordError ? "border-[#FF383C]" : ""}`}
             />
             <button
-              type="button"
+              type="button" 
+              
               onClick={() => setShowPassword(!showPassword)}
               className="absolute right-3 top-1/2 -translate-y-1/2 text-[#667085] hover:text-[#101828] transition-colors"
               aria-label="Toggle password visibility"

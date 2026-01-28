@@ -1,0 +1,37 @@
+"use client";
+
+import { useContext, useEffect } from "react";
+import { PageTitleContext } from "../layout";
+import { RoleRequestForm } from "@/components/hiring/role-request-form";
+
+export default function HiringPage() {
+  const { setTitle } = useContext(PageTitleContext);
+
+  useEffect(() => {
+    setTitle("Hiring");
+  }, [setTitle]);
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleSubmit = (data: any) => {
+    // TODO: Handle form submission - API call, Zustand store update, etc.
+    console.log("Role request submitted:", data);
+  };
+
+  return (
+    <div className="py-8 px-6 md:px-12 max-w-112.5 mx-auto">
+      {/* Header */}
+      <div className="mb-8">
+        <h1 className="text-[2rem] font-bold text-[#212121] mb-2">
+          Role Request
+        </h1>
+        <p className="text-[#444444] text-sm leading-relaxed max-w-lg">
+          Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+          vulputate libero et velit interdum, ac aliquet odio mattis.
+        </p>
+      </div>
+
+      {/* Form */}
+      <RoleRequestForm onSubmit={handleSubmit} />
+    </div>
+  );
+}
